@@ -15,4 +15,7 @@ while True:
     print(f"Connection from {address} has been established !! ")
     msg = "Welcome to the server !!"
     clientsocket.send(bytes(msg.encode("utf-8")))
+ 
+    print(clientsocket.recv(1024).decode("utf-8"))
+    clientsocket.close()
     

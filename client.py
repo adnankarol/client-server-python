@@ -10,3 +10,6 @@ s.connect((socket.gethostname(), 1234))
 msg = s.recv(1024)
 print(msg.decode("utf-8"))
 
+msg = "Client is connected !!"
+s.send(msg.encode("utf-8"))
+
